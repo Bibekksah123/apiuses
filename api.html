@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+
+  </div>
+  <script>
+    let container=document.querySelector('.container');
+    let url = 'https://fakestoreapi.com/products';  // Updated URL to return an array of products
+
+async function dataget() {
+    let res = await fetch(url);
+    let data = await res.json();
+
+    // If data is an array, you can use map to iterate over it.
+    data.map((ele) => {
+        console.log(ele);
+    });
+}
+
+dataget();
+
+    
+  </script>
+</body>
+</html>
